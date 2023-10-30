@@ -5,7 +5,7 @@ class PriceTracer:
         self.url= url
         self.user_agent = {"User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36"}
         self.response = requests.get(url= self.url, headers= self.user_agent).text
-        self.soup = BeautifulSoup (self.response,"html.parser")
+        self.soup = BeautifulSoup (self.response ,"html.parser ")
     def product_title(self):
         title = self.soup.find("span",{"id" : "productTitle"})
         if title is not None:
